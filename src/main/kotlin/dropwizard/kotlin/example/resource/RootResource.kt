@@ -14,7 +14,9 @@ class RootResource(private val name: String) {
     @Produces(MediaType.APPLICATION_JSON)
     @Timed
     fun default(): Response {
-        val entity = mapOf("name" to name,
+        val entity = mapOf(
+                "message" to "Hello World!",
+                "name" to name,
                 "java.version" to System.getProperty("java.version"),
                 "java.runtime.name" to System.getProperty("java.runtime.name"))
         return Response.ok().entity(entity).build()

@@ -14,8 +14,8 @@ COPY src/main/resources/keystore.pfx /usr/local/app
 RUN chown -R app:app /usr/local/app
 RUN chmod +x /usr/local/app/bin/docker-entrypoint.sh
 
-EXPOSE 8080
-EXPOSE 8081
+EXPOSE 8180
+EXPOSE 8181
 EXPOSE 8443
 
 CMD ["/usr/local/app/bin/docker-entrypoint.sh"]
